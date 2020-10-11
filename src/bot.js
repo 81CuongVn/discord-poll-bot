@@ -1,12 +1,11 @@
-require('dotenv').config();
 const { Client, Collection } = require('discord.js');
 const { readdirSync } = require('fs');
 const { connect } = require('mongoose');
+const { dburl, token, prefix } = require('../config.json');
 const fetchAll = require('./util/fetchAll');
 const emojiArray = require('./util/optionArray');
 const pollModel = require('./models/poll');
 const client = new Client();
-const prefix = process.env.prefix;
 
 client.commands = new Collection();
 
@@ -21,7 +20,7 @@ client.once('ready', () => {
 
     client.user.setActivity('your polls!', { type: 'WATCHING' });
 
-    connect(process.env.dburl, {
+    connect(dburl, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     }).then(console.log('MongoDB Connected'));
@@ -79,4 +78,4 @@ client.on('message', message => {
     }
 });
 
-client.login(process.env.token);
+client.login(token);

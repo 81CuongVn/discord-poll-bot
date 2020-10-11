@@ -1,4 +1,4 @@
-require('dotenv').config();
+const { prefix } = require('../../config.json');
 
 module.exports = {
     name: 'help',
@@ -11,10 +11,10 @@ module.exports = {
             description: `
                 **Polls**
                 Create a poll using the command
-                \`${process.env.prefix}poll {Title} [Option 1] [Option 2] [Option 3]\`
+                \`${prefix}poll {Title} [Option 1] [Option 2] [Option 3]\`
 
                 You can create a poll with a expiry date and end the poll once over
-                \`${process.env.prefix}poll {Title} {Time} [Option 1] [Option 2] [Option 3]\`
+                \`${prefix}poll {Title} {Time} [Option 1] [Option 2] [Option 3]\`
 
                 **Note:** Each poll can have up to 20 options.
 

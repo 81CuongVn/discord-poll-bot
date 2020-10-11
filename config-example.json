@@ -1,0 +1,5 @@
+{
+    "token": "discord bot token",
+    "dburl": "mongo db connection url",
+    "prefix": "?"
+}
