@@ -19,6 +19,8 @@ for (const file of commandFiles) {
 client.once('ready', () => {
     console.log('Yo this is ready!');
 
+    client.user.setActivity('your polls!', { type: 'WATCHING' });
+
     connect(process.env.dburl, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
