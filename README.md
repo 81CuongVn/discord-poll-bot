@@ -1,5 +1,5 @@
 # 🤖 Discord Poll Bot
-> Discord poll bot using discord js and mongo db. 
+> Discord poll bot using discord js and mongo db and discord js guide command handler. 
 ## ⚓ Requirements
 1. Discord Bot Token **[Guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)**
 2. MongoDB cluster **[Guild](https://docs.atlas.mongodb.com/getting-started/)**
@@ -14,6 +14,7 @@ npm install
 
 ## ⚙️  Configuration
 Rename the file `config-example.json` to `config.json` and fill out the values
+
 ⚠️  **Note: Never share your tokens publicly**  ⚠️
 ```json
 {
