@@ -23,6 +23,7 @@ module.exports = {
             `,
         };
 
-        message.channel.send({ embed: embed });
+        message.channel.send({ embed: embed })
+            .catch(err => console.log(err));
     },
 };

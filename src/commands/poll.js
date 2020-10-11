@@ -12,16 +12,16 @@ module.exports = {
         const pollTitle = squigglyRegex.test(args[0]) ? squigglyRegex.exec(args[0])[1] : null;
 
         if (!pollTitle) {
-            return message.channel.send('You need to specify a poll title');
+            return message.channel.send('You need to specify a poll title').catch(err => console.log(err));
         }
 
         const pollsArray = args.slice(1).join(' ').match(squareRegex);
 
         if (!pollsArray) {
-            return message.channel.send('You need to specify poll options');
+            return message.channel.send('You need to specify poll options').catch(err => console.log(err));
         }
         else if (pollsArray.length > 20) {
-            return message.channel.send('You can\'t have more than 20 poll options.');
+            return message.channel.send('You can\'t have more than 20 poll options.').catch(err => console.log(err));
         }
 
         let i = 0;
@@ -37,7 +37,7 @@ module.exports = {
             },
         };
 
-        const msg = await message.channel.send({ embed: embed });
+        const msg = await message.channel.send({ embed: embed }).catch(err => console.log(err));
 
         if (timedPoll) {
             const pollDoc = new pollModel({
