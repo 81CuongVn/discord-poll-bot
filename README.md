@@ -18,9 +18,9 @@ Rename the file `config-example.json` to `config.json` and fill out the values
 ⚠️  **Note: Never share your tokens publicly**  ⚠️
 ```json
 {
-	"token":  "discord bot token",
-	"dburl":  "mongo db connection url",
-	"prefix":  "?"
+    "token":  "discord bot token",
+    "dburl":  "mongo db connection url",
+    "prefix":  "?"
 }
 ```
 
@@ -29,6 +29,7 @@ Create a poll using the command
 `?poll {Title} [Option 1] [Option 2] [Option 3]`
 
 You can create a poll with a expiry date and end the poll once over
+
 `?poll {Title} {Time} [Option 1] [Option 2] [Option 3]`
 
 **Note:** Each poll can have up to 20 options.
