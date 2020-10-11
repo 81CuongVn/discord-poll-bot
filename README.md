@@ -1,8 +1,8 @@
 # 🤖 Discord Poll Bot
-> 
+> Discord poll bot using discord js and mongo db. 
 ## ⚓ Requirements
 1. Discord Bot Token **[Guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)**
-2. MongoDB cluster **[Guild]([https://docs.atlas.mongodb.com/getting-started/](https://docs.atlas.mongodb.com/getting-started/))**
+2. MongoDB cluster **[Guild](https://docs.atlas.mongodb.com/getting-started/)**
 3. **[NodeJS](https://nodejs.org/en/)** v12.0.0 or higher
 
 ## 🚀  Getting Started
