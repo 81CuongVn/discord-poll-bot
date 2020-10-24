@@ -9,13 +9,15 @@ const ms = require('ms');
 module.exports = {
     name: 'poll',
     async execute(message, args) {
-        const pollTitle = squigglyRegex.test(args[0]) ? squigglyRegex.exec(args[0])[1] : null;
+        const pollParameters = args.join(' ');
+        const pollTitle = squigglyRegex.test(pollParameters) ? squigglyRegex.exec(pollParameters)[1] : null;
 
         if (!pollTitle) {
             return message.channel.send('You need to specify a poll title').catch(err => console.log(err));
         }
 
-        const pollsArray = args.slice(1).join(' ').match(squareRegex);
+        pollParameters.replace(`{${pollTitle}}`, '');
+        const pollsArray = pollParameters.match(squareRegex);
 
         if (!pollsArray) {
             return message.channel.send('You need to specify poll options').catch(err => console.log(err));
