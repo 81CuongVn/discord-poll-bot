@@ -56,7 +56,7 @@ client.once('ready', () => {
                 }
             }
         }
-    }, 2000);
+    }, 30000);
 });
 
 client.on('message', message => {
