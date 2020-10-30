@@ -1,6 +1,6 @@
 const emojiArray = require('../util/optionArray');
 const pollModel = require('../models/poll');
-const squigglyRegex = RegExp(/{(.*)}/);
+const squigglyRegex = RegExp(/{(.*?)}/);
 const squareRegex = RegExp(/\[[^[]+\]/g);
 const timeRegex = RegExp(/{(\d+(s|m|h|d|w))}/);
 const moment = require('moment');
@@ -11,6 +11,7 @@ module.exports = {
     async execute(message, args) {
         const pollParameters = args.join(' ');
         const pollTitle = squigglyRegex.test(pollParameters) ? squigglyRegex.exec(pollParameters)[1] : null;
+        console.log(squigglyRegex.exec(pollParameters));
 
         if (!pollTitle) {
             return message.channel.send('You need to specify a poll title').catch(err => console.log(err));
